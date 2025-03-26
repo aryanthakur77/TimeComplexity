@@ -1,0 +1,33 @@
+public class Test {
+    public void constantTime() {
+        int a = 5;
+        int b = 10;
+        int sum = a + b;
+        System.out.println(sum);
+    }
+
+    public void linearTime(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.println(i);
+        }
+    }
+
+    public void quadraticTime(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.println(i + " " + j);
+            }
+        }
+    }
+
+    public void logarithmicTime(int n) {
+        for (int i = 1; i < n; i *= 2) {
+            System.out.println(i);
+        }
+    }
+
+    public int recursiveFunction(int n) {
+        if (n <= 1) return 1;
+        return n * recursiveFunction(n - 1);
+    }
+}
